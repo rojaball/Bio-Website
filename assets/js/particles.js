@@ -4,7 +4,7 @@ class ParticleSystem {
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.maxParticles = 50;
+        this.maxParticles = 25;
         this.mouse = { x: 0, y: 0 };
         
         this.init();
@@ -75,8 +75,8 @@ class ParticleSystem {
                 const dy = this.particles[i].y - this.particles[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < 100) {
-                    const opacity = (100 - distance) / 100 * 0.5;
+                if (distance < 80) {
+                    const opacity = (80 - distance) / 80 * 0.4;
                     this.ctx.strokeStyle = `rgba(0, 255, 0, ${opacity})`;
                     this.ctx.lineWidth = 1;
                     this.ctx.beginPath();
@@ -145,7 +145,13 @@ class Particle {
 
 // Initialize particle system when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        new ParticleSystem();
-    }, 1000); // Delay to ensure video background is loaded
+    // Performance check: disable particles on mobile or slow devices
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSlowConnection = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
+    
+    if (!isMobile && !isSlowConnection) {
+        setTimeout(() => {
+            new ParticleSystem();
+        }, 1000); // Delay to ensure video background is loaded
+    }
 });

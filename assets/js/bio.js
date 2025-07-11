@@ -13,7 +13,7 @@ fetch('bio.md')
     
     function typeWriter() {
         if (index < bioText.length) {
-            bioContentElement.innerHTML += bioText.charAt(index);
+            bioContentElement.innerHTML = bioText.substring(0, index);
             index++;
             setTimeout(typeWriter, speed);
         } else {
