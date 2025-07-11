@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
-<link rel="stylesheet" type="text/css" href="styles.css"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="icon" type="image/x-icon" href="./assets/favico/default.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniil Skiba's Bio Site</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black; /* Black background */
+            color: green; /* Green text */
+            font-family: 'Courier New', Courier, monospace; /* A techy, terminal-like font */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            border: 1px solid green;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Green glow effect */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black for container */
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: green; /* Ensure header is green */
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .judo-photos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .judo-photos img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid green;
+            border-radius: 8px;
+        }
+        a {
+            color: #00FFFF; /* Cyan for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body class="custom-cursor">
-  <!-- Terminal Window -->
-  <div id="terminal" class="custom-cursor">
-    <div id="terminal-header">
-      <div id="terminal-buttons">
-        <!-- Terminal Control Buttons -->
-        <div class="terminal-button" id="close-button"></div> <!-- Close button -->
-        <div class="terminal-button" id="minimize-button"></div> <!-- Minimize button -->
-        <div class="terminal-button" id="maximize-button"></div> <!-- Maximize button -->
-      </div>
+<body>
+    <div class="container">
+        <h1>About Daniil Skiba</h1>
+        <p>
+            Hello! My name is Daniil Skiba. I regularly train judo and am passionate about creating websites and games.
+            I'm also learning how to perform magic tricks with cards, coins, and more.
+            I hail from Spain, specifically Andalusia, in the city of Malaga.
+            In the world of cybersports, I enjoy playing Gorilla Tag and VRFS (Virtual Reality Football Soccer).
+            Additionally, I love playing football outdoors and sometimes incorporate it into my training.
+            Beyond judo, my favorite sports include basketball and swimming.
+        </p>
+        <div class="judo-photos">
+            <img src="https://via.placeholder.com/150?text=Judo+Throw" class="img-fluid" alt="Judo Throw">
+            <img src="https://via.placeholder.com/150?text=Judo+Mat" class="img-fluid" alt="Judo Mat">
+            <img src="https://via.placeholder.com/150?text=Judo+Stance" class="img-fluid" alt="Judo Stance">
+        </div>
+        <p style="margin-top: 20px;">
+            <a href="https://github.com/rojaball" target="_blank">Visit my GitHub</a>
+        </p>
     </div>
-    <div id="terminal-content">
-      <p id="terminal-text"></p> <!-- Terminal text content -->
-    </div>
-  </div>
-  <!-- Background Elements -->
-  <div id="video-background">
-    <video autoplay muted loop id="myVideo"> <!-- Video background -->
-      <source src="./assets/back/default.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div id="audio-background">
-      <audio autoplay loop id="myAudio"> <!-- Audio background -->
-        <source src="./assets/music/default.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div id="blurred-box">
-      <img id="profile-picture" src="./assets/pfp/default.jpg" alt="Profile Picture">
-      <img id="avatar-frame" src="" alt="Avatar Frame">
-      <p id="username" style="color: white; font-weight: bold; font-size: large;">Yoghurt1337</p> <!-- Username -->
-      <!-- User Description -->
-      <div class="user-description">
-        <p id="user-description" style="color: white;">made with ❤️ </p>
-      </div>
-      <!-- Links -->
-      <div class="links">
-        <a href="https://soundcloud.com/nightyouth1337" target="_blank">
-          <i class="fab fa-soundcloud"></i>
-        </a> 
-        <a href="https://github.com/Yoghurt1337" target="_blank">
-          <i class="fab fa-github"></i> 
-        </a> 
-        <a href="https://www.paypal.com/paypalme/lilpeepvb1" target="_blank">
-          <i class="fa-brands fa-paypal"></i>
-        </a> 
-      </div>
-    </div>
-  </div>
-  <script src="./assets/js/script.js"></script> <!-- Script for functionality -->
-  <script src="./assets/js/title.js"></script> <!-- Script for title functionality -->
-  <script src="./assets/js/discord.js"></script> <!-- Script for discord functionality -->
+
+    <!-- Bootstrap JS (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
