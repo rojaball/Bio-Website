@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             unmuteButton.textContent = 'Unmute';
         }
     });
+
+    setTimeout(() => {
+        document.getElementById('bio-container').scrollIntoView({ behavior: 'smooth' });
+    }, 60000);
 });
