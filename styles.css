@@ -172,7 +172,6 @@ body {
   font-size: 1.2em;
 }
 
-
 .top-left {
   top: 0;
   left: 0;
@@ -289,4 +288,25 @@ body {
   z-index: 1000; /* Ensure it is above the profile picture */
   pointer-events: none; /* Prevent interaction with the frame */
   display: none; /* Initially hidden */
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-buttons .btn {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
