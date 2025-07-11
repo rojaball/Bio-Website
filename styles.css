@@ -145,6 +145,33 @@ body {
   fill: white;
 }
 
+.social-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-buttons .btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.social-buttons .btn:hover {
+  background-color: #555;
+}
+
+.social-buttons .btn .fab {
+  font-size: 1.2em;
+}
+
 
 .top-left {
   top: 0;
