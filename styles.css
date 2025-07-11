@@ -3,8 +3,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Courier New', Courier, monospace;
-  overflow: hidden; /* Hide overflow to prevent scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: auto; /* Allow vertical scrolling */
   background-color: black; /* Set background color to black */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Define custom cursor */
@@ -398,6 +400,213 @@ body {
   display: block;
 }
 
+/* Advanced Hover Animations */
+.container {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.7);
+}
+
+/* Typing cursor animation */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: green;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Glitch effect for text */
+.glitch {
+  position: relative;
+  color: green;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: glitch 0.3s linear infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.3s linear infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.3s linear infinite;
+  color: #00ffff;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 74%, 100% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translate(-2px, 0);
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 74%, 100% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translate(2px, 0);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 74%, 100% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translate(-2px, 0);
+  }
+}
+
+/* Pulse animation for elements */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glow effect on hover */
+.glow:hover {
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Social buttons enhanced hover */
+.social-buttons .btn {
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.social-buttons .btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+}
+
+.social-buttons .btn:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.4), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.social-buttons .btn:hover:before {
+  transform: translateX(100%);
+}
+
+/* Mute button hover effect */
+.mute-button {
+  transition: all 0.3s ease;
+}
+
+.mute-button:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+/* Contact section enhanced animations */
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: rotate(45deg) translateX(-100%); }
+  100% { transform: rotate(45deg) translateX(100%); }
+}
+
+/* Typewriter effect for headings */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid green;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: green }
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -427,5 +636,13 @@ body {
   .form-group input,
   .form-group textarea {
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .glitch {
+    font-size: 1.5em;
+  }
+
+  .container:hover {
+    transform: none; /* Disable hover transform on mobile */
   }
 }
