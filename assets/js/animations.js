@@ -194,14 +194,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all animations
     function initializeAnimations() {
         initSmoothScrolling();
-        enhancedTypingAnimation();
+        // enhancedTypingAnimation(); // Removed as per user request
         addGlitchEffect();
         addHoverEffects();
         addScrollAnimations();
         initScrollAnimations();
         autoScrollToBio();
         initParallax();
-        addTypewriterEffect();
+        // addTypewriterEffect(); // Removed as per user request
     }
     
     // Start animations after a short delay
