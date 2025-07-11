@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const soundIcon = muteButton.querySelector('.sound-icon');
 
     // Try to play with sound, but handle browser restrictions
-    video.muted = false; // Ensure video is not muted
     video.play().then(() => {
         // Autoplay started!
     }).catch(error => {
