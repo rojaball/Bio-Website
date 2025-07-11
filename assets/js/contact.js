@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const formStatus = document.getElementById('form-status');
     const submitBtn = document.querySelector('.submit-btn');
     
-    // Formspree configuration (replace with your actual Formspree endpoint)
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xdkoqpzv'; // You need to create this at formspree.io
+    // Formspree configuration
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkgbdyvl'; // Your actual Formspree endpoint
     
     // Rate limiting configuration
     const MAX_MESSAGES_PER_DAY = 2;
