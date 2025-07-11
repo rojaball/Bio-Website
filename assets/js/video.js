@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const muteButton = document.getElementById('mute-button');
     const soundIcon = muteButton.querySelector('.sound-icon');
 
-    // Try to play with sound, but handle browser restrictions
-    video.muted = false; // Ensure video is not muted
+    // Start with muted autoplay (browsers allow this)
+    video.muted = true;
     video.play().then(() => {
-        // Autoplay started!
+        // Autoplay started successfully with muted video
+        console.log('Video autoplay started (muted)');
     }).catch(error => {
-        // Autoplay was prevented.
-        // Show a "Play" button so the user can start playback.
-        video.play();
+        // Even muted autoplay failed
+        console.log('Video autoplay failed:', error);
     });
 
     muteButton.addEventListener('click', () => {
