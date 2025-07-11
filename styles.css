@@ -131,7 +131,23 @@ body {
   z-index: 0; /* Behind other content */
 }
 
-/* Positioning classes */
+#unmute-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#unmute-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .top-left {
   top: 0;
   left: 0;
