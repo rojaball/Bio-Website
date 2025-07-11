@@ -290,6 +290,114 @@ body {
   display: none; /* Initially hidden */
 }
 
+/* Contact Form Styles */
+.contact-section {
+  max-width: 800px;
+  padding: 30px;
+  border: 1px solid green;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  margin: 40px auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid green;
+  color: green;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00FF00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+  color: green;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  text-align: center;
+  display: none;
+}
+
+.form-status.success {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+  color: green;
+  display: block;
+}
+
+.form-status.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  color: red;
+  display: block;
+}
+
+.form-status.loading {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 1px solid yellow;
+  color: yellow;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -308,5 +416,16 @@ body {
   .social-buttons .btn {
     width: 80%;
     margin: 0 auto;
+  }
+
+  .contact-section {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
   }
 }
