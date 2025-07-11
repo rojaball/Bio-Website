@@ -2,13 +2,6 @@
 
 This project is a customizable self-hosted bio webpage template where users can share links to their profiles or any other content, accompanied by background music and video. It's designed to provide a personalized online presence with a unique aesthetic.
 
-## Features
-
-- **Customizable Content:** Users can personalize their bio with their profile picture, username, user description, and links to their preferred platforms (e.g., SoundCloud, GitHub, PayPal).
-  
-- **Background Music and Video:** The webpage includes options for background music and video to enhance the user experience. Users can set their preferred audio and video content to play automatically when someone visits their bio.
-
-- **Terminal-Like Interface:** The template incorporates a terminal-like interface for a distinctive and interactive design. It includes buttons for control (close, minimize, maximize) to add to the aesthetic and potentially provide future functionality.
 
 ## Usage
 
@@ -45,11 +38,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to customiz
 
 [Demo Site](https://yoghurt1337.github.io/Bio-Website/)
 
-![image](https://github.com/Yoghurt1337/Selfhosted-Bio-Template/assets/78077899/5302bd00-e2e0-482e-ab76-40e6106f560a)
 
-![image](https://github.com/Yoghurt1337/Selfhosted-Bio-Template/assets/78077899/7f3430c9-00dc-4693-a1eb-0cff9a816d63)
-## To-Do
-- [X] Add phone support
-- [X] fix system detection (Need to be updated asap) (quick fix applyed)
-- [X] Fix the links size / position in middle according to the display size
-- [ ] Make Another Theme
