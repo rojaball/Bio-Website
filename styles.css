@@ -291,9 +291,18 @@ body {
   border: 1px solid green;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   margin: 40px auto;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-section:focus-within {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .contact-form {
@@ -316,7 +325,7 @@ body {
 
 .form-group input,
 .form-group textarea {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid green;
   color: green;
   padding: 10px;

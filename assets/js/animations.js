@@ -21,33 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Enhanced typing animation for bio text
-    function enhancedTypingAnimation() {
-        const bioContent = document.getElementById('bio-content');
-        if (!bioContent) return;
-        
-        // Add typing cursor
-        const cursor = document.createElement('span');
-        cursor.className = 'typing-cursor';
-        cursor.textContent = '|';
-        
-        // Observe when bio content changes
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.type === 'childList' && bioContent.textContent.length > 0) {
-                    // Add cursor after typing completes
-                    setTimeout(() => {
-                        bioContent.appendChild(cursor);
-                        setTimeout(() => {
-                            cursor.remove();
-                        }, 3000);
-                    }, 100);
-                }
-            });
-        });
-        
-        observer.observe(bioContent, { childList: true, subtree: true });
-    }
+    
     
     // Add glitch effect to headings
     function addGlitchEffect() {
@@ -171,25 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add typewriter effect to specific elements
-    function addTypewriterEffect() {
-        const typewriterElements = document.querySelectorAll('.typewriter');
-        
-        typewriterElements.forEach(element => {
-            const text = element.textContent;
-            element.textContent = '';
-            
-            let i = 0;
-            const timer = setInterval(() => {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(timer);
-                }
-            }, 50);
-        });
-    }
+    
     
     // Initialize all animations
     function initializeAnimations() {
