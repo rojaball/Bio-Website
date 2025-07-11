@@ -131,22 +131,20 @@ body {
   z-index: 0; /* Behind other content */
 }
 
-#unmute-button {
+.mute-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-#unmute-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.sound-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
 }
+
 
 .top-left {
   top: 0;
