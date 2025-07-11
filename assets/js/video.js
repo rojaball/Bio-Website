@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }).catch(error => {
         // Autoplay was prevented.
         // Show a "Play" button so the user can start playback.
-        video.muted = true;
         video.play();
     });
 
