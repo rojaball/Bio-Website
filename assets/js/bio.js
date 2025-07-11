@@ -23,9 +23,8 @@ fetch('bio.md')
             setTimeout(typeWriter, speed);
         } else {
             // After typing is complete, replace with properly formatted HTML
-            bioContentElement.innerHTML = bioHTML;
+            bioContentElement.innerHTML = bioHTML; // Shows full bio
             
-            // Add blinking cursor after typing is complete
             const cursor = document.createElement('span');
             cursor.className = 'typing-cursor';
             cursor.textContent = '|';
