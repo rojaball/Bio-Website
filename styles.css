@@ -133,18 +133,10 @@ body {
   z-index: 0; /* Behind other content */
 }
 
-.mute-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
 .sound-icon {
-  width: 30px;
-  height: 30px;
-  fill: white;
+  width: 24px;
+  height: 24px;
+  fill: green;
 }
 
 .social-buttons {
